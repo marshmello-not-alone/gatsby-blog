@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+//styled components
 const BlogLink = styled(Link)`
   text-decoration: none;
 `
@@ -15,6 +16,7 @@ const BlogTitle = styled.h3`
   color: black;
 `
 
+//react components
 export default ({ data }) => {
   console.log(data)
   return (

@@ -16,8 +16,7 @@ export default ({ data }) => {
 //note: set all html value inside this div
 
 /*match this field on our markdown remark where the slug is equivalent to this slug string that we passed in
-from parameter
-*/
+from parameter*/
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: {slug: { eq: $slug }}){

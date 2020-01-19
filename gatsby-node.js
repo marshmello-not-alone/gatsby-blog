@@ -1,4 +1,4 @@
-/*this method allowed us to hook into the build into the build process when Gatsby would go through our files and build
+/*this method allowed us to hook into the build process when Gatsby would go through our files and build
 out the individual node representations of them and then we were specifically looking for nodes of the type of markdown
 remark, we then added this new node field on it equal to slug and the slug pointed to the new file path that we made 
 Now we have the slug value that we can access
