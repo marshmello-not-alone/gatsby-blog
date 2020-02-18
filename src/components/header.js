@@ -16,14 +16,13 @@ const HeaderH1 = styled(Link)`
   transition: 0.6s;
 `
 const NavigationContainer = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
   height: 3rem;
   width: 100%;
   border-bottom: solid 0.05rem lightgrey;
   z-index: 999;
   margin-bottom: 5rem;
+  background: #f1f3f4;
 `
 const NavBarInnerDiv = styled.div`
   display: flex;
@@ -69,7 +68,7 @@ const Header = ({ siteTitle }) => (
     <NavBarInnerDiv>
       <HeaderH1 to="/">{siteTitle}</HeaderH1>
       <OptionsContainer>
-        <OptionsLink>Blogs</OptionsLink>
+        <OptionsLink to="/blog-list">Blogs</OptionsLink>
         <OptionsLink to="/about-me">About</OptionsLink>
         <SocialIconLink href="https://github.com/jqiallnatural">
           <FontAwesomeIcon icon={faGithub} />

@@ -3,61 +3,23 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 //styled components
-const BlogLink = styled(Link)`
-  text-decoration: none;
+const HomePageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
-const BlogTitle = styled.h3`
-  margin-bottom: 18px;
-  color: black;
-`
-
-//react components
-export default ({ data }) => {
-  console.log(data)
+export default () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
-        <h1>Hello everyone</h1>
-        <h4>{data.allMarkdownRemark.totalCount}</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <BlogLink to={node.fields.slug}>
-              <BlogTitle>
-                {node.frontmatter.title} - {node.frontmatter.date}
-              </BlogTitle>
-            </BlogLink>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
-      </div>
+      <HomePageContainer>
+        <h1>Hey Hey Hey</h1>
+        <span>Welcome to my website!</span>
+      </HomePageContainer>
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            date
-            description
-            title
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
