@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
